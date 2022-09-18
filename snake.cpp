@@ -10,14 +10,14 @@ Snake::Snake(int px, int py, int maxwidth, int maxheight) : nodes(1) {
 void Snake::update() {
 	int *ux = &(nodes[0].x);
 	int *uy = &(nodes[0].y);
-	// int tempx = *ux, tempy = *uy;
-	// for(int i=1; i<(int)nodes.size();i++) {
-	// 	int ftempx = nodes[i].x, ftempy = nodes[i].y;
-	// 	nodes[i].x = tempx;
-	// 	nodes[i].y = tempy;
-	// 	tempx = ftempx;
-	// 	tempy = ftempy;
-	// }
+	int tempx = *ux, tempy = *uy;
+	for(int i=1; i<(int)nodes.size();i++) {
+		int ftempx = nodes[i].x, ftempy = nodes[i].y;
+		nodes[i].x = tempx;
+		nodes[i].y = tempy;
+		tempx = ftempx;
+		tempy = ftempy;
+	}
 	switch(direction) {
 		case RIGHT:
 			*ux = *ux + 1;

@@ -1,6 +1,6 @@
 CC := clang++
-CFILES := main.cpp interface.cpp snake.cpp
-HFILES := interface.hpp snake.hpp
+CFILES := main.cpp interface.cpp snake.cpp apple.cpp
+HFILES := interface.hpp snake.hpp apple.hpp
 FILES := $(CFILES) $(HFILES) Makefile
 OUT := main
 LIBS := `pkg-config --cflags --libs ncurses`
