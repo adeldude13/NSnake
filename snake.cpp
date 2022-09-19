@@ -54,5 +54,18 @@ void Snake::addNode() {
 }
 
 void Snake::setDir(Direction nd) {
+	if( (nd == RIGHT || nd == LEFT) && (direction == RIGHT || direction == LEFT) ) {
+		return;	
+	}
+	if( (nd == UP || nd == DOWN ) && (direction == UP || direction == DOWN) ) {
+		return;	
+	}
 	direction = nd;
+}
+
+bool Snake::isDead() {
+	if(nodes[0].y < 0 || nodes[0].x < 0 || nodes[0].x >= ( width - 1) || nodes[0].y >= (height-1) ) {
+		return true;
+	}
+	return false;
 }

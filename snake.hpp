@@ -22,6 +22,7 @@ class Snake {
 		Snake(int , int , int , int);
 		void update(), addNode();
 		void setDir(Direction);
+		bool isDead();
 		std::vector<Node> nodes;
 	private:
 		int height, width;

@@ -58,6 +58,7 @@ void Interface::update() {
 		snake->addNode();
 	}
 	snake->update();
+	isRunning = !snake->isDead();
 }
 
 void Interface::render() {
